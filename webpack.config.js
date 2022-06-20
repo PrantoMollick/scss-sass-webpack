@@ -34,7 +34,7 @@ const htmlPluginEntries = templateFiles.map(
 
 module.exports = {
   mode: "development",
-  devtool: "eval-source-map",
+  devtool: "source-map",
 
   entry: {
     index: path.resolve(__dirname, "./src/js/index.js"),
@@ -58,7 +58,7 @@ module.exports = {
     },
     open: true,
     compress: true,
-    hot: false,
+    hot: true,
     host: "127.0.0.1",
     port: 3000,
   },
@@ -122,7 +122,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/[name]-[hash:5].css",
+      filename: "css/[name].css",
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({

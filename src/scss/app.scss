@@ -1,1 +1,7 @@
-@import 'main';
+@import 'base/vars';
+
+//mixins
+@import 'base/mixins';
+
+// page styles
+@import 'style';
